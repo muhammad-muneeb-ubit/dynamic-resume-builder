@@ -1,26 +1,3 @@
-// interface FormData {
-//     name: string;
-//     email: string;
-//     phone: string;
-//     linkedin?: string;
-//     github?: string; 
-//     address: string;
-//     pic?: File; 
-//     about: string;
-//     schoolName: string;
-//     schoolYear: any; 
-//     schoolGrade: string;
-//     collegeName?: string;
-//     collegeYear: any; 
-//     collegeGrade: string;
-//     companyName: string;
-//     description: string;
-//     yearStart: any; 
-//     yearEnd: any;  
-//     skills: string[]; 
-//     languages: string[];
-//     reference?: string;
-//   }
 function handleSubmit(event) {
     event.preventDefault();
     const form = document.getElementById("resume-form");

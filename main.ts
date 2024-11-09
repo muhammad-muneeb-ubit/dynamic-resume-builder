@@ -1,78 +1,3 @@
-// interface FormData {
-//     name: string;
-//     email: string;
-//     phone: string;
-//     linkedin?: string;
-//     github?: string; 
-//     address: string;
-//     pic?: File; 
-//     about: string;
-//     schoolName: string;
-//     schoolYear: any; 
-//     schoolGrade: string;
-//     collegeName?: string;
-//     collegeYear: any; 
-//     collegeGrade: string;
-//     companyName: string;
-//     description: string;
-//     yearStart: any; 
-//     yearEnd: any;  
-//     skills: string[]; 
-//     languages: string[];
-//     reference?: string;
-//   }
-  
-//   function handleSubmit(event: Event) {
-//     event.preventDefault();
-  
-//     const form = event.target as HTMLFormElement;
-//     const formData: FormData = {
-//         name: "",
-//         email: "",
-//         phone: "",
-//         address: "",
-//         about: "",
-//         schoolName: "",
-//         schoolYear: undefined,
-//         schoolGrade: "",
-//         collegeYear: undefined,
-//         collegeGrade: "",
-//         companyName: "",
-//         description: "",
-//         yearStart: undefined,
-//         yearEnd: undefined,
-//         skills: [],
-//         languages: []
-//     };
-
-  
-//     // Loop through all form elements (excluding submit button)
-//     for (const element of Array.from( form.elements)) {
-//       if (element.tagName !== 'BUTTON') {
-//         const inputElement = element as HTMLInputElement;
-//         const name = inputElement.name;
-//         const value = inputElement.type === 'file' ? inputElement.files?.[0] : inputElement.value;
-  
-//         if (name) {
-//           (formData as any)[name] = value;
-//         }
-//       }
-//     }
-  
-//     // Access and process form data
-//     console.log(formData);
-    
-//     // Example usage of data
-//     const name = formData.name;
-//     const email = formData.email;
-//     console.log(name);
-//     console.log(email);
-//     // ... and so on
-  
-//     // You can now use the form data for further processing, 
-//     // such as sending it to a server or generating a resume.
-//   }
-
 interface FormData {
     name: string;
     email: string;
@@ -95,8 +20,7 @@ interface FormData {
   
   function handleSubmit(event: Event) {
     event.preventDefault();
-    
-  
+
     const form = document.getElementById("resume-form") as HTMLFormElement;
     const formData: FormData = {
         name: (document.querySelector('input[name="name"]') as HTMLInputElement).value,
